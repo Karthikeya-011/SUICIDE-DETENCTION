@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: suicide-monitoring-app
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: DB_HOST
+        value: localhost
+      - key: DB_USER
+        value: admin_0123
+      - key: DB_PASSWORD
+        value: root
+      - key: DB_NAME
+        value: suicide_monitoring
+      - key: EMAIL_USER
+        value: karthikeyak54321@gmail.com
+      - key: EMAIL_PASSWORD
+        value: auym deaa otia gyml
